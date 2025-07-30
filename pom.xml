@@ -133,7 +133,11 @@
                 </configuration>
             </plugin>
 		<!-- CODE COVERAGE -->
+<<<<<<< HEAD
 		    <plugin>
+=======
+	            <plugin>
+>>>>>>> origin
                      <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-war-plugin</artifactId>
                      <version>3.2.2</version>
@@ -142,6 +146,7 @@
  		        <groupId>org.jacoco</groupId>
  		        <artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.4</version>
+<<<<<<< HEAD
 		        <executions>
 		            <execution>
 		                <id>jacoco-initialize</id>
@@ -159,6 +164,26 @@
 		            </execution>
 		        </executions>
 		</plugin>
+=======
+ 		        <executions>
+ 		            <execution>
+ 		                <id>jacoco-initialize</id>
+ 		                <phase>process-resources</phase>
+ 		                <goals>
+ 		                    <goal>prepare-agent</goal>
+ 		                </goals>
+ 		            </execution>
+ 		            <execution>
+ 		                <id>jacoco-site</id>
+ 		                <phase>post-integration-test</phase>
+ 		                <goals>
+ 		                    <goal>report</goal>
+ 		                </goals>
+ 		            </execution>
+ 		        </executions>
+ 		</plugin>
+		
+>>>>>>> origin
         </plugins>
     </build>
 	<repositories>
